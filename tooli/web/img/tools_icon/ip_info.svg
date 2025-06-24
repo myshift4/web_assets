@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="vscodeIconsFileTypeSystemverilog0" x1="2" x2="25.625" y1="26.221" y2="26.221" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a348f"/>
+      <stop offset="1" stop-color="#e5e9c6"/>
+    </linearGradient>
+    <linearGradient id="vscodeIconsFileTypeSystemverilog1" x1="6.375" x2="30" y1="5.779" y2="5.779" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e5e9c6"/>
+      <stop offset="1" stop-color="#1a348f"/>
+    </linearGradient>
+  </defs>
+  <text x="16" y="23" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c087e">IP</text>
+  <path fill="url(#vscodeIconsFileTypeSystemverilog0)" d="M25.625 23.961c-4.462 6.4-18.148 5.853-20.732-1.52H2c2.062 9.602 19.439 9.998 23.625 1.52"/>
+  <path fill="url(#vscodeIconsFileTypeSystemverilog1)" d="M30 9.559c-2.062-9.6-19.439-10-23.625-1.52c4.462-6.4 18.148-5.853 20.732 1.52Z"/>
+</svg>

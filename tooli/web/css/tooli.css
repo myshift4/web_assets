@@ -1,0 +1,252 @@
+
+    /* 渐变背景 */
+    .gradient-bg {
+        /*background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);*/
+        background: linear-gradient(135deg, #787ef7 0%, #3b42c5 100%);
+    }
+    
+    /* 自定义滚动条 */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    /* 按钮渐变效果 */
+    .btn-login {
+        background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+    }
+    .btn-register {
+        background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+    }
+    .btn-login:hover, .btn-register:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 用户头像下拉菜单 */
+    .user-menu {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: white;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        z-index: 100;
+    }
+    .user-avatar:hover .user-menu {
+        display: block;
+    }
+    .user-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        text-decoration: none;
+    }
+    .user-menu a:hover {
+        background: #f5f5f5;
+    }
+
+    /* 语言选择下拉菜单 */
+    .language-selector {
+        position: relative;
+        display: inline-block;
+    }
+    .language-menu {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: white;
+        min-width: 120px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        z-index: 100;
+    }
+    .language-selector:hover .language-menu {
+        display: block;
+    }
+    .language-menu a {
+        display: block;
+        padding: 8px 12px;
+        color: #333;
+        text-decoration: none;
+    }
+    .language-menu a:hover {
+        background: #f5f5f5;
+    }
+    .language-menu a.active {
+        background: #e5e7eb;
+        font-weight: 500;
+    }
+    .language-flag {
+        width: 20px;
+        height: 15px;
+        margin-right: 8px;
+        border-radius: 2px;
+    }
+
+
+    /* 暗色模式样式 */
+    .dark-mode {
+        background-color: #1a202c;
+        color: #e2e8f0;
+    }
+    .dark-mode .gradient-bg {
+        background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    }
+    .dark-mode .bg-white {
+        background-color: #2d3748;
+    }
+    .dark-mode .bg-gray-50,
+    .dark-mode .bg-green-50,
+    .dark-mode .bg-yellow-50,
+    .dark-mode .bg-purple-50,
+    .dark-mode .bg-blue-50 {
+        background-color: #1a202c;
+    }
+    .dark-mode .text-gray-600,
+    .dark-mode .text-gray-700,
+    .dark-mode .text-gray-800 {
+        color: #e2e8f0;
+    }
+    .dark-mode .text-blue-600 {
+        color: #90cdf4;
+    }
+    .dark-mode .border-gray-100 {
+        border-color: #4a5568;
+    }
+    .dark-mode .shadow-md {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    .dark-mode .user-menu,
+    .dark-mode .language-menu {
+        background-color: #2d3748;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    .dark-mode .user-menu a,
+    .dark-mode .language-menu a {
+        color: #e2e8f0;
+    }
+    .dark-mode .user-menu a:hover,
+    .dark-mode .language-menu a:hover {
+        background-color: #4a5568;
+    }
+    .dark-mode .bg-gray-100 {
+        background-color: #4a5568;
+        color: #e2e8f0;
+    }
+    .dark-mode .bg-gray-100:hover {
+        background-color: #5a6778;
+    }
+    .dark-mode .bg-blue-100 {
+        background-color: #2c5282;
+    }
+
+
+    /* 禁用按钮样式 */
+    button:disabled {
+        color: #817d7d; /* 深灰色文字 */
+        cursor: not-allowed; /* 鼠标显示禁止符号 */
+    }
+
+
+    /* 新增：评论区域样式 */
+    .comment-section {
+        border-top: 4px solid #4f46e5;
+        padding-top: 2rem;
+        margin-top: 3rem;
+    }
+    .comment-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+    .comment-card:hover {
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+    }
+    .comment-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 1rem;
+    }
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .comment-content {
+        padding-left: 52px;
+        line-height: 1.6;
+        color: #4b5563;
+    }
+    .comment-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        color: #9ca3af;
+        font-size: 0.875rem;
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 2rem;
+    }
+    .page-btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: white;
+        border: 1px solid #e5e7eb;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+    .page-btn:hover {
+        background: #4f46e5;
+        color: white;
+        border-color: #4f46e5;
+    }
+    .page-btn.active {
+        background: #4f46e5;
+        color: white;
+        border-color: #4f46e5;
+    }
+    .char-counter {
+        text-align: right;
+        font-size: 0.875rem;
+        color: #6b7280;
+        margin-top: 4px;
+    }
+    .char-counter.warning {
+        color: #ef4444;
+    }
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+        
