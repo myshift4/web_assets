@@ -21,12 +21,12 @@ async function user_credits_settlement(tool_id, CSRFToken) {
             alert(result.msg);
             return false;
         } else {
-            alert("网络错误，请稍后再试")
+            alert("网络错误，请刷新页面后再尝试")
             return false;
         }
     } catch (error) {
         console.error('发生错误:', error);
-        alert("网络错误，请稍后再试")
+        alert("网络错误，请刷新页面后再尝试")
         return false;
     } 
 }
