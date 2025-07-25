@@ -11,17 +11,17 @@ async function user_credits_settlement(tool_id, CSRFToken) {
                 }
         });
         const result =  await response.json();
-        if (response.ok) {
+        if (response.status == 200) {
             if (result.code != 200) {
                 alert(result.msg);
                 return false;
             }
             return true;
-        } else if (response.status == 403) {
+        } else if (response.status == 400 || response.status == 403) {
             alert(result.msg);
             return false;
         } else {
-            alert("网络错误，请刷新页面后再尝试")
+            alert("系统错误，请刷新页面后再尝试")
             return false;
         }
     } catch (error) {
