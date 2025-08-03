@@ -1,52 +1,64 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 模拟用户登录状态
-    let isLoggedIn = false; // 初始状态为未登录
-    
-    // 切换登录状态函数
-    function toggleLoginStatus() {
-        isLoggedIn = !isLoggedIn;
-        updateUI();
+    // 移动菜单切换
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');  
+    if(mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+            // 切换菜单图标
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('show')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
     }
 
-    // 更新UI显示
-    function updateUI() {
-        const authButtons = document.getElementById('auth-buttons');
-        const userInfo = document.getElementById('user-info');
-        const mobileAuthButtons = document.getElementById('mobile-auth-buttons');
-        const mobileUserInfo = document.getElementById('mobile-user-info');
-        if (isLoggedIn) {
-            // 显示用户信息，隐藏登录注册按钮
-            authButtons.classList.add('hidden');
-            userInfo.classList.remove('hidden');
-            mobileAuthButtons.classList.add('hidden');
-            mobileUserInfo.classList.remove('hidden');
-        } else {
-            // 显示登录注册按钮，隐藏用户信息
-            authButtons.classList.remove('hidden');
-            userInfo.classList.add('hidden');
-            mobileAuthButtons.classList.remove('hidden');
-            mobileUserInfo.classList.add('hidden');
-        }
+    // 用户信息下拉菜单切换
+    const userAvatarBtn = document.getElementById('user-avatar-btn');
+    const userMenu = document.getElementById('user-menu');
+    if(userAvatarBtn && userMenu) {
+        userAvatarBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // 阻止事件冒泡
+            userMenu.classList.toggle('show');
+        });
+                
+        // 点击页面其他地方关闭下拉菜单
+        document.addEventListener('click', () => {
+            userMenu.classList.remove('show');
+        });
     }
-    
-    // 移动菜单切换
-    // const mobileMenuButton = document.getElementById('mobile-menu-button');
-    // const mobileMenu = document.getElementById('mobile-menu');
-    // if(mobileMenuButton && mobileMenu) {
-    //     mobileMenuButton.addEventListener('click', () => {
-    //         mobileMenu.classList.toggle('hidden');
-    //         // 切换菜单图标
-    //         const icon = mobileMenuButton.querySelector('i');
-    //         if (mobileMenu.classList.contains('hidden')) {
-    //             icon.classList.remove('fa-times');
-    //             icon.classList.add('fa-bars');
-    //         } else {
-    //             icon.classList.remove('fa-bars');
-    //             icon.classList.add('fa-times');
-    //         }
-    //     });
-    // }
-    
+
+            //const loginStatus = document.getElementById('login-status').value.trim();
+            // let isLoggedIn = true;
+            // if (loginStatus == 0 ){
+            //     toggleLoginStatus()
+            // }
+            // // 切换登录状态函数
+            // function toggleLoginStatus() {
+            //     isLoggedIn = !isLoggedIn;
+            //     updateUI();
+            // }
+            // //更新UI显示
+            // function updateUI() {
+            //     const authButtons = document.getElementById('auth-buttons');
+            //     const userInfo = document.getElementById('user-info');
+            //     if (isLoggedIn) {
+            //         // 显示用户信息，隐藏登录注册按钮
+            //         authButtons.classList.add('hidden');
+            //         userInfo.classList.remove('hidden');
+            //     } else {
+            //         // 显示登录注册按钮，隐藏用户信息
+            //         authButtons.classList.remove('hidden');
+            //         userInfo.classList.add('hidden');
+            //     }
+            // }
+            // //初始化UI状态
+            //updateUI();
+
     // 返回顶部按钮
     const backToTopButton = document.getElementById('back-to-top');
     if(backToTopButton) {
